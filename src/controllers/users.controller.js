@@ -12,16 +12,16 @@ import {
 import { formatValidationError } from '#utils/format.js';
 
 export const fetchAllUsers = async (req, res, next) => {
-  try{
+  try {
     logger.info('Getting users ....');
-      
+
     const allUsers = await getAllUsers();
     res.json({
       message: 'Successfully retrived users',
       users: allUsers,
       count: allUsers.length,
     });
-  } catch (e){
+  } catch (e) {
     logger.error(e);
     next(e);
   }

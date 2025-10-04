@@ -11,11 +11,6 @@ const router = express.Router();
 router.get('/', fetchAllUsers);
 router.get('/:id', fetchUserById);
 router.put('/:id', updateUserById);
-router.delete(
-  '/:id',
-  deleteUserById
-);
-
+router.delete('/:id', deleteUserById);
 
 export default router;
-
